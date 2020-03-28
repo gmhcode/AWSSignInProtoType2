@@ -86,16 +86,16 @@
 		90990335242FDB8900C89AAC /* AWSSignInProtoType2 */ = {
 			isa = PBXGroup;
 			children = (
+				90990351242FEEE100C89AAC /* HelperClasses */,
 				9099034E242FE17700C89AAC /* Model */,
 				9099034A242FDE8000C89AAC /* awsconfiguration.json */,
 				90990336242FDB8900C89AAC /* AppDelegate.swift */,
 				90990338242FDB8900C89AAC /* SceneDelegate.swift */,
-				9099033A242FDB8900C89AAC /* ViewController.swift */,
+				90990352242FEEF100C89AAC /* ViewControllers */,
 				9099033C242FDB8900C89AAC /* Main.storyboard */,
 				9099033F242FDB8C00C89AAC /* Assets.xcassets */,
 				90990341242FDB8C00C89AAC /* LaunchScreen.storyboard */,
 				90990344242FDB8C00C89AAC /* Info.plist */,
-				9099034C242FE0F700C89AAC /* Authorization.swift */,
 			);
 			path = AWSSignInProtoType2;
 			sourceTree = "<group>";
@@ -106,6 +106,22 @@
 				9099034F242FE18000C89AAC /* User.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		90990351242FEEE100C89AAC /* HelperClasses */ = {
+			isa = PBXGroup;
+			children = (
+				9099034C242FE0F700C89AAC /* Authorization.swift */,
+			);
+			path = HelperClasses;
+			sourceTree = "<group>";
+		};
+		90990352242FEEF100C89AAC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9099033A242FDB8900C89AAC /* ViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

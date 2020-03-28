@@ -16,5 +16,12 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func signInTapped(_ sender: Any) {
+        Authorization.global.signUp(vc: self, emailText: "gmhcode@gmail.com", password: "Hughes01!", passwordRetype: "Hughes01!", username: "gmhcode@gmail.com") { (confirmed) in
+            if let confirmed = confirmed{
+                print("good 🎸")
+            }
+        }
+    }
 }
 

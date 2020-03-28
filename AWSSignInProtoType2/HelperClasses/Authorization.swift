@@ -6,7 +6,7 @@
 //  Copyright © 2020 Greg Hughes. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import AWSMobileClient
 
 var theUser : User!
@@ -25,7 +25,7 @@ struct Authorization {
         }
     }
     
-    func signUp(emailText:String?,password:String?,passwordRetype: String?,username:String?, completion: @escaping(ConfirmationState?)->Void){
+    func signUp(vc:UIViewController,emailText:String?,password:String?,passwordRetype: String?,username:String?, completion: @escaping(ConfirmationState?)->Void){
         guard let emailText = emailText,
             let passwordText = password,
             let retypePassword = passwordRetype,
@@ -34,7 +34,7 @@ struct Authorization {
         
         if passwordText != retypePassword {
             // Show passwords do not match alert
-            
+            self.passwordDontMatchAlert(vc: vc)
             completion(nil)
         }
         
@@ -44,20 +44,22 @@ struct Authorization {
                                          password: user.password,
                                          userAttributes: ["email":user.email,"custom:uuid":user.uuid]) { (signUpResult, error) in
             if let signUpResult = signUpResult {
+                
                 switch(signUpResult.signUpConfirmationState) {
                 case .confirmed:
                     print("🏊🏾‍♂️ User is signed up and confirmed.")
                 //TODO : Alert saying the user already exists
-                    self.confirmedEmailExistsAlert()
+                    self.confirmedEmailExistsAlert(vc: vc)
                     completion(nil)
+                    
+                    
                 case .unconfirmed:
                     
-                    
-                    
                     print("🚣🏼‍♂️ User is not confirmed and needs verification via \(signUpResult.codeDeliveryDetails!.deliveryMedium) sent at \(signUpResult.codeDeliveryDetails!.destination!)")
-                    Authorization.global.theUser = user
                     
+                    Authorization.global.theUser = user
                     completion(.emailWillBeSent)
+                    
                 case .unknown:
                     print("Unexpected case")
                     completion(nil)
@@ -68,7 +70,7 @@ struct Authorization {
                     case .usernameExists(let message):
                         print(message, " 🥇")
                          //TODO : Alert saying the user already exists
-                    self.unconfirmedEmailExistsAlert()
+                        self.unconfirmedEmailExistsAlert(vc: vc)
                     default:
                         break
                     }
@@ -80,18 +82,14 @@ struct Authorization {
         }
     }
     
-    func passwordDontMatchAlert() {
+    func passwordDontMatchAlert(vc:UIViewController) {
         let alertController = UIAlertController(title: "Invalid Passwords", message: "The passwords do not match", preferredStyle: .alert)
-        let okButton = UIAlertAction(title: "Ok", style: .cancel) { (ok) in
-            ///  segue to confirmation VC :
-            
-            
-        }
+        let okButton = UIAlertAction(title: "Ok", style: .cancel)
         alertController.addAction(okButton)
-        alertController.show()
+        vc.present(alertController, animated: true, completion: nil)
     }
     
-    func confirmedEmailExistsAlert() {
+    func confirmedEmailExistsAlert(vc:UIViewController) {
         let alertController = UIAlertController(title: "Email Already Exists", message: "An account with the given email already exists and is confirmed ", preferredStyle: .alert)
         let okButton = UIAlertAction(title: "Ok", style: .cancel) { (ok) in
             ///  segue to confirmation VC :
@@ -99,18 +97,17 @@ struct Authorization {
             
         }
         alertController.addAction(okButton)
-        alertController.show()
+        vc.present(alertController, animated: true, completion: nil)
     }
     
-    func unconfirmedEmailExistsAlert() {
+    func unconfirmedEmailExistsAlert(vc:UIViewController) {
+        DispatchQueue.main.async {
         let alertController = UIAlertController(title: "Email Already Exists", message: "An account with the given email already exists and is unconfirmed ", preferredStyle: .alert)
-        let okButton = UIAlertAction(title: "Ok", style: .cancel) { (ok) in
-            ///  segue to confirmation VC :
-            
-            
-        }
+        let okButton = UIAlertAction(title: "Ok", style: .cancel)
         alertController.addAction(okButton)
-        alertController.show()
+//        alertController.show()
+            vc.present(alertController, animated: true, completion: nil)
+        }
     }
     
     
@@ -121,7 +118,7 @@ struct Authorization {
 public extension UIAlertController {
 //    will present alert no matter which view controller the user is on
     func show() {
-        DispatchQueue.main.async {
+//        DispatchQueue.main.async {
             let win = UIWindow(frame: UIScreen.main.bounds)
             let vc = UIViewController()
             vc.view.backgroundColor = .clear
@@ -129,7 +126,7 @@ public extension UIAlertController {
             win.windowLevel = UIWindow.Level.alert + 1
             win.makeKeyAndVisible()
             vc.present(self, animated: true, completion: nil)
-        }
+//        }
         
     }
 }
