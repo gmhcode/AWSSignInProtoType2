@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,10 @@
 		9099033E242FDB8900C89AAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9099033C242FDB8900C89AAC /* Main.storyboard */; };
 		90990340242FDB8C00C89AAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9099033F242FDB8C00C89AAC /* Assets.xcassets */; };
 		90990343242FDB8C00C89AAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90990341242FDB8C00C89AAC /* LaunchScreen.storyboard */; };
+		9099034B242FDE8000C89AAC /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 9099034A242FDE8000C89AAC /* awsconfiguration.json */; };
+		9099034D242FE0F700C89AAC /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9099034C242FE0F700C89AAC /* Authorization.swift */; };
+		90990350242FE18000C89AAC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9099034F242FE18000C89AAC /* User.swift */; };
+		F0317BC6B7C4851352EF8AFA /* Pods_AWSSignInProtoType2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1ECF74BC00A1CF8EDF3BDFA /* Pods_AWSSignInProtoType2.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,12 @@
 		9099033F242FDB8C00C89AAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90990342242FDB8C00C89AAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		90990344242FDB8C00C89AAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9099034A242FDE8000C89AAC /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = SOURCE_ROOT; };
+		9099034C242FE0F700C89AAC /* Authorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authorization.swift; sourceTree = "<group>"; };
+		9099034F242FE18000C89AAC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D1ECF74BC00A1CF8EDF3BDFA /* Pods_AWSSignInProtoType2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AWSSignInProtoType2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3064F5CB38B27C0FD2F57B3 /* Pods-AWSSignInProtoType2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AWSSignInProtoType2.debug.xcconfig"; path = "Target Support Files/Pods-AWSSignInProtoType2/Pods-AWSSignInProtoType2.debug.xcconfig"; sourceTree = "<group>"; };
+		E608F0BD654B91A94ACA4BEB /* Pods-AWSSignInProtoType2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AWSSignInProtoType2.release.xcconfig"; path = "Target Support Files/Pods-AWSSignInProtoType2/Pods-AWSSignInProtoType2.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +41,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0317BC6B7C4851352EF8AFA /* Pods_AWSSignInProtoType2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		36A6AFBD8711C398188CF96B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E3064F5CB38B27C0FD2F57B3 /* Pods-AWSSignInProtoType2.debug.xcconfig */,
+				E608F0BD654B91A94ACA4BEB /* Pods-AWSSignInProtoType2.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6CDD59B73FE4B1091E45CFB6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D1ECF74BC00A1CF8EDF3BDFA /* Pods_AWSSignInProtoType2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9099032A242FDB8900C89AAC = {
 			isa = PBXGroup;
 			children = (
 				90990335242FDB8900C89AAC /* AWSSignInProtoType2 */,
 				90990334242FDB8900C89AAC /* Products */,
+				36A6AFBD8711C398188CF96B /* Pods */,
+				6CDD59B73FE4B1091E45CFB6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +86,8 @@
 		90990335242FDB8900C89AAC /* AWSSignInProtoType2 */ = {
 			isa = PBXGroup;
 			children = (
+				9099034E242FE17700C89AAC /* Model */,
+				9099034A242FDE8000C89AAC /* awsconfiguration.json */,
 				90990336242FDB8900C89AAC /* AppDelegate.swift */,
 				90990338242FDB8900C89AAC /* SceneDelegate.swift */,
 				9099033A242FDB8900C89AAC /* ViewController.swift */,
@@ -63,8 +95,17 @@
 				9099033F242FDB8C00C89AAC /* Assets.xcassets */,
 				90990341242FDB8C00C89AAC /* LaunchScreen.storyboard */,
 				90990344242FDB8C00C89AAC /* Info.plist */,
+				9099034C242FE0F700C89AAC /* Authorization.swift */,
 			);
 			path = AWSSignInProtoType2;
+			sourceTree = "<group>";
+		};
+		9099034E242FE17700C89AAC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9099034F242FE18000C89AAC /* User.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +115,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 90990347242FDB8C00C89AAC /* Build configuration list for PBXNativeTarget "AWSSignInProtoType2" */;
 			buildPhases = (
+				66332CC5A231B9E506330252 /* [CP] Check Pods Manifest.lock */,
 				9099032F242FDB8900C89AAC /* Sources */,
 				90990330242FDB8900C89AAC /* Frameworks */,
 				90990331242FDB8900C89AAC /* Resources */,
+				F4363C44F40A3ADB6DCF83E2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,6 +168,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9099034B242FDE8000C89AAC /* awsconfiguration.json in Resources */,
 				90990343242FDB8C00C89AAC /* LaunchScreen.storyboard in Resources */,
 				90990340242FDB8C00C89AAC /* Assets.xcassets in Resources */,
 				9099033E242FDB8900C89AAC /* Main.storyboard in Resources */,
@@ -132,6 +176,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		66332CC5A231B9E506330252 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AWSSignInProtoType2-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4363C44F40A3ADB6DCF83E2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AWSSignInProtoType2/Pods-AWSSignInProtoType2-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AWSSignInProtoType2/Pods-AWSSignInProtoType2-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AWSSignInProtoType2/Pods-AWSSignInProtoType2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9099032F242FDB8900C89AAC /* Sources */ = {
@@ -141,6 +227,8 @@
 				9099033B242FDB8900C89AAC /* ViewController.swift in Sources */,
 				90990337242FDB8900C89AAC /* AppDelegate.swift in Sources */,
 				90990339242FDB8900C89AAC /* SceneDelegate.swift in Sources */,
+				90990350242FE18000C89AAC /* User.swift in Sources */,
+				9099034D242FE0F700C89AAC /* Authorization.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +370,7 @@
 		};
 		90990348242FDB8C00C89AAC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3064F5CB38B27C0FD2F57B3 /* Pods-AWSSignInProtoType2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +389,7 @@
 		};
 		90990349242FDB8C00C89AAC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E608F0BD654B91A94ACA4BEB /* Pods-AWSSignInProtoType2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
