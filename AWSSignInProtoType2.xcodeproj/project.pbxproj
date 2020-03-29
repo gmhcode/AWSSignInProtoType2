@@ -16,6 +16,7 @@
 		9099034B242FDE8000C89AAC /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 9099034A242FDE8000C89AAC /* awsconfiguration.json */; };
 		9099034D242FE0F700C89AAC /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9099034C242FE0F700C89AAC /* Authorization.swift */; };
 		90990350242FE18000C89AAC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9099034F242FE18000C89AAC /* User.swift */; };
+		90990354242FF67400C89AAC /* ConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90990353242FF67400C89AAC /* ConfirmViewController.swift */; };
 		F0317BC6B7C4851352EF8AFA /* Pods_AWSSignInProtoType2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1ECF74BC00A1CF8EDF3BDFA /* Pods_AWSSignInProtoType2.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		9099034A242FDE8000C89AAC /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = SOURCE_ROOT; };
 		9099034C242FE0F700C89AAC /* Authorization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authorization.swift; sourceTree = "<group>"; };
 		9099034F242FE18000C89AAC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		90990353242FF67400C89AAC /* ConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmViewController.swift; sourceTree = "<group>"; };
 		D1ECF74BC00A1CF8EDF3BDFA /* Pods_AWSSignInProtoType2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AWSSignInProtoType2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3064F5CB38B27C0FD2F57B3 /* Pods-AWSSignInProtoType2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AWSSignInProtoType2.debug.xcconfig"; path = "Target Support Files/Pods-AWSSignInProtoType2/Pods-AWSSignInProtoType2.debug.xcconfig"; sourceTree = "<group>"; };
 		E608F0BD654B91A94ACA4BEB /* Pods-AWSSignInProtoType2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AWSSignInProtoType2.release.xcconfig"; path = "Target Support Files/Pods-AWSSignInProtoType2/Pods-AWSSignInProtoType2.release.xcconfig"; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				9099033A242FDB8900C89AAC /* ViewController.swift */,
+				90990353242FF67400C89AAC /* ConfirmViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				9099033B242FDB8900C89AAC /* ViewController.swift in Sources */,
 				90990337242FDB8900C89AAC /* AppDelegate.swift in Sources */,
 				90990339242FDB8900C89AAC /* SceneDelegate.swift in Sources */,
+				90990354242FF67400C89AAC /* ConfirmViewController.swift in Sources */,
 				90990350242FE18000C89AAC /* User.swift in Sources */,
 				9099034D242FE0F700C89AAC /* Authorization.swift in Sources */,
 			);

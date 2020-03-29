@@ -20,8 +20,19 @@ class ViewController: UIViewController {
         Authorization.global.signUp(vc: self, emailText: "gmhcode@gmail.com", password: "Hughes01!", passwordRetype: "Hughes01!", username: "gmhcode@gmail.com") { (confirmed) in
             if let confirmed = confirmed{
                 print("good 🎸")
+                DispatchQueue.main.async {
+                self.performSegue(withIdentifier: "confirmID", sender: nil)
+                }
             }
         }
     }
+    @IBAction func signIn(_ sender: Any) {
+        //        "Abc@123!"
+        //        "gmhcode@gmail.com"
+//        Authorization.global.signOut()
+        Authorization.global.signIn(email: "gmhcode@gmail.com", password: "Hughes01")
+    }
+    
+    
 }
 
