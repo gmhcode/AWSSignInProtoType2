@@ -30,9 +30,9 @@ class ViewController: UIViewController {
         //        "Abc@123!"
         //        "gmhcode@gmail.com"
 //        Authorization.global.signOut()
-        Authorization.global.signIn(email: "gmhcode@gmail.com", password: "Hughes01")
+        Authorization.global.signIn(email: "gmhcode@gmail.com", password: "Hughes01", vc: self)
     }
-    
+  
     
 }
 

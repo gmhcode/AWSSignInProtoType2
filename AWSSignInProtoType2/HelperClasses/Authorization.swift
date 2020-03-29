@@ -72,8 +72,17 @@ struct Authorization {
                     print("Error: Invalid case.")
                     completion(nil)
                 }
-            } else if let error = error {
-                print("Error occurred: \(error.localizedDescription)")
+            } else if let error = error as? AWSMobileClientError{
+                print("Error occurred: \(error)")
+                
+                switch error {
+                case  .userNotFound(let message):
+                    print(message)
+                    self.userNotFoundError(vc: vc)
+                    
+                default:
+                    break
+                }
                 completion(nil)
             }
         }
@@ -201,6 +210,15 @@ struct Authorization {
             }
         }
     }
+    private func userNotFoundError(vc:UIViewController) {
+        DispatchQueue.main.async {
+            let alertController = UIAlertController(title: "Email Not Found", message: "Unable to locate and users with the provided email address", preferredStyle: .alert)
+            let okButton = UIAlertAction(title: "Ok", style: .cancel)
+            alertController.addAction(okButton)
+            vc.present(alertController, animated: true, completion: nil)
+        }
+    }
+    
     private func confirmationCodeSentAlert(vc:UIViewController){
         DispatchQueue.main.async {
             let alertController = UIAlertController(title: "Confirmation Sent", message: "The confirmation code has been sent to your email address", preferredStyle: .alert)
