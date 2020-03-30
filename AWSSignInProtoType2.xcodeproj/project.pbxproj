@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		904DA55D24302FD600BBB98C /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904DA55C24302FD600BBB98C /* ForgotPasswordViewController.swift */; };
+		904DA55F2431789D00BBB98C /* ConfirmForgotPWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904DA55E2431789C00BBB98C /* ConfirmForgotPWViewController.swift */; };
 		90990337242FDB8900C89AAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90990336242FDB8900C89AAC /* AppDelegate.swift */; };
 		90990339242FDB8900C89AAC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90990338242FDB8900C89AAC /* SceneDelegate.swift */; };
 		9099033B242FDB8900C89AAC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9099033A242FDB8900C89AAC /* ViewController.swift */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		904DA55C24302FD600BBB98C /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		904DA55E2431789C00BBB98C /* ConfirmForgotPWViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmForgotPWViewController.swift; sourceTree = "<group>"; };
 		90990333242FDB8900C89AAC /* AWSSignInProtoType2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AWSSignInProtoType2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90990336242FDB8900C89AAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90990338242FDB8900C89AAC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				9099033A242FDB8900C89AAC /* ViewController.swift */,
 				90990353242FF67400C89AAC /* ConfirmViewController.swift */,
 				904DA55C24302FD600BBB98C /* ForgotPasswordViewController.swift */,
+				904DA55E2431789C00BBB98C /* ConfirmForgotPWViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				9099033B242FDB8900C89AAC /* ViewController.swift in Sources */,
 				904DA55D24302FD600BBB98C /* ForgotPasswordViewController.swift in Sources */,
 				90990337242FDB8900C89AAC /* AppDelegate.swift in Sources */,
+				904DA55F2431789D00BBB98C /* ConfirmForgotPWViewController.swift in Sources */,
 				90990339242FDB8900C89AAC /* SceneDelegate.swift in Sources */,
 				90990354242FF67400C89AAC /* ConfirmViewController.swift in Sources */,
 				90990350242FE18000C89AAC /* User.swift in Sources */,
