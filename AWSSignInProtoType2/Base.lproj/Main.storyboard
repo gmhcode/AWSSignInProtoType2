@@ -124,10 +124,10 @@
             </objects>
             <point key="canvasLocation" x="1229" y="479"/>
         </scene>
-        <!--View Controller-->
+        <!--Confirm ForgotPW View Controller-->
         <scene sceneID="Vss-24-PSg">
             <objects>
-                <viewController id="nGK-NK-9qv" sceneMemberID="viewController">
+                <viewController id="nGK-NK-9qv" customClass="ConfirmForgotPWViewController" customModule="AWSSignInProtoType2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Go-hN-rDQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -142,6 +142,10 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="confirmationCodeTextField:" destination="hBA-N2-12z" eventType="editingDidEnd" id="pmB-YN-6ny"/>
+                                            <action selector="confirmationCodeTextField:" destination="nGK-NK-9qv" eventType="editingDidEnd" id="ys4-iv-oov"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="NewPassword" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dKf-ve-6eK">
                                         <rect key="frame" x="0.0" y="66" width="350" height="50"/>
@@ -183,6 +187,7 @@
                     <navigationItem key="navigationItem" id="u6j-Z6-jx6"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WL5-bc-nFV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="hBA-N2-12z" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2097" y="481"/>
         </scene>
