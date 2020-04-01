@@ -17,7 +17,7 @@ class ViewController: UIViewController {
 
 
     @IBAction func signInTapped(_ sender: Any) {
-        Authorization.global.signUp(vc: self, emailText: "gmhcode@gmail.com", password: "Hughes01!", passwordRetype: "Hughes01!", username: "gmhcode@gmail.com") { (confirmed) in
+        Authorization.global.signUp(vc: self, emailText: "greghughes988@gmail.com", password: "Hughes01!", passwordRetype: "Hughes01!", username: "greghughes988@gmail.com") { (confirmed) in
             if let confirmed = confirmed{
                 print("good 🎸")
                 DispatchQueue.main.async {
@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         //        "Abc@123!"
         //        "gmhcode@gmail.com"
 //        Authorization.global.signOut()
-        Authorization.global.signIn(email: "gmhcode@gmail.com", password: "Hughes01", vc: self)
+        Authorization.global.signIn(email: "greghughes988@gmail.com", password: "Hello!12", vc: self)
     }
   
     

@@ -17,9 +17,12 @@ class ForgotPasswordViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func forgotPWButtonTapped(_ sender: Any) {
-        Authorization.global.forgotPassword(email: "gmhco@gmail.com", vc: self) { (state) in
+        Authorization.global.forgotPassword(email: "greghughes988@gmail.com", vc: self) { (state) in
             if state == .confirmationCodeSent {
-                self.performSegue(withIdentifier: "confirmForgotPasswordSegue", sender: nil)
+                DispatchQueue.main.async {
+                    
+//                    self.performSegue(withIdentifier: "confirmForgotPasswordSegue", sender: nil)
+                }
             }
         }
     }

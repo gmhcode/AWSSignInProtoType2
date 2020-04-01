@@ -91,6 +91,7 @@
                                 </state>
                                 <connections>
                                     <action selector="forgotPWButtonTapped:" destination="CRg-Ml-ehy" eventType="touchUpInside" id="l14-Sp-4sV"/>
+                                    <segue destination="nGK-NK-9qv" kind="show" id="me0-GW-iEf"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="afp-W1-Wbz">
@@ -117,7 +118,6 @@
                     <navigationItem key="navigationItem" id="zn4-Ox-j2a"/>
                     <connections>
                         <outlet property="emailTextField" destination="afp-W1-Wbz" id="jU7-zZ-epB"/>
-                        <segue destination="nGK-NK-9qv" kind="show" identifier="confirmForgotPasswordSegue" id="ONg-3J-Q0h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YME-W9-KOl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -169,6 +169,9 @@
                                         <state key="normal" title="update password">
                                             <color key="titleColor" red="0.18039215689999999" green="0.1843137255" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
+                                        <connections>
+                                            <action selector="updatePasswordTapped:" destination="nGK-NK-9qv" eventType="touchUpInside" id="ql1-jH-wn7"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -186,6 +189,8 @@
                     <navigationItem key="navigationItem" id="u6j-Z6-jx6"/>
                     <connections>
                         <outlet property="confirmationCodeTextField" destination="eNe-Lm-Yz7" id="WML-OL-Ydw"/>
+                        <outlet property="newPasswordTextFIeld" destination="dKf-ve-6eK" id="pPv-8W-sG0"/>
+                        <outlet property="retypeNewPasswordTextField" destination="jen-cl-Qzi" id="ZZz-qr-AOl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WL5-bc-nFV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

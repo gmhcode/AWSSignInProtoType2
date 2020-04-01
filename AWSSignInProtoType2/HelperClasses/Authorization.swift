@@ -29,7 +29,7 @@ struct Authorization {
         AWSMobileClient.default().signOut()
     }
     
-    func newPassword(email:String?,newPassword:String?,reTypePassword:String?,confirmationCode:String?,vc:UIViewController,completion:@escaping (ForgotPasswordState?)->Void) {
+    func newPassword(email:String?,newPassword:String?,reTypePassword:String?,confirmationCode:String?,vc:UIViewController,completion:@escaping (ConfirmationState?)->Void) {
         
         guard let email = email,
         let password = newPassword,
@@ -46,7 +46,7 @@ struct Authorization {
                 switch(forgotPasswordResult.forgotPasswordState) {
                 case .done:
                     print("Password changed successfully")
-                    completion(.done)
+                    completion(.emailWillBeSent)
                 default:
                     print("Error: Could not change password.")
                     completion(nil)
@@ -280,6 +280,7 @@ struct Authorization {
     
     enum ConfirmationState {
         case emailWillBeSent
+        case accepted
     }
 }
 public extension UIAlertController {

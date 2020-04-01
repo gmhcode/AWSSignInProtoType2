@@ -11,12 +11,24 @@ import UIKit
 class ConfirmForgotPWViewController: UIViewController {
  
     @IBOutlet weak var confirmationCodeTextField: UITextField!
+    @IBOutlet weak var newPasswordTextFIeld: UITextField!
     
+    @IBOutlet weak var retypeNewPasswordTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func updatePasswordTapped(_ sender: Any) {
+        
+        Authorization.global.newPassword(email: "greghughes988@gmail.com", newPassword: "Hello!12", reTypePassword: "Hello!12", confirmationCode: confirmationCodeTextField.text, vc: self) { (state) in
+            guard let state = state else {print("❇️♊️>>>\(#file) \(#line): guard let failed<<<"); return}
+            
+
+        }
+    }
+    
     
 
     /*
