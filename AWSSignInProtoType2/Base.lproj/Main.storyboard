@@ -144,7 +144,6 @@
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <action selector="confirmationCodeTextField:" destination="hBA-N2-12z" eventType="editingDidEnd" id="pmB-YN-6ny"/>
-                                            <action selector="confirmationCodeTextField:" destination="nGK-NK-9qv" eventType="editingDidEnd" id="ys4-iv-oov"/>
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="NewPassword" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dKf-ve-6eK">
@@ -185,6 +184,9 @@
                         <viewLayoutGuide key="safeArea" id="wmM-uF-SlV"/>
                     </view>
                     <navigationItem key="navigationItem" id="u6j-Z6-jx6"/>
+                    <connections>
+                        <outlet property="confirmationCodeTextField" destination="eNe-Lm-Yz7" id="WML-OL-Ydw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WL5-bc-nFV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="hBA-N2-12z" userLabel="Exit" sceneMemberID="exit"/>

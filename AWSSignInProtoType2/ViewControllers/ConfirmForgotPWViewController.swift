@@ -9,8 +9,8 @@
 import UIKit
 
 class ConfirmForgotPWViewController: UIViewController {
-    @IBAction func confirmationCodeTextField(_ sender: Any) {
-    }
+ 
+    @IBOutlet weak var confirmationCodeTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
